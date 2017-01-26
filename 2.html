@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+
+    <meta charset="UTF-8">
+    <title>意見調查表</title>
+    <style>
+        @media screen and ( min-width:992px )
+    { .col-md-1  {width: calc(100% * [1-12] / 12);}	
+}
+    @media screen and ( min-width:768px )and( min-width:991px )
+    {	.col-md-1  {width: calc(100% * [1-12] / 12);}	
+     
+}
+[class*="col-"] {	width: 100%;	float: left;}
+     body{background-image: url('2.jpg');
+　background-repeat:no-repeat;
+        background-size:cover;
+    }
+    
+        #TDiv{
+            text-align: center
+        }
+        #ButtonD{
+            text-align: center
+        }
+    </style>
+    <div>
+    <h1 id=TDiv>意見調查表</h1>
+    </div>
+    <form name="reg"  form method="post" action="form.aspx">   <fieldset>  	<legend>基本資料</legend> 	姓名:<input type="text" id="Name"placeholder="最大長度10字">&nbsp;&nbsp;&nbsp;&nbsp; 	生日:西元<input type="text" id="Year">年
+    <select name="Month">
+    <option value="select">請選取</option>
+　<option value="january">1</option>
+　<option value="february">2</option>
+　<option value="march">3</option>
+　<option value="april">4</option>
+　<option value="may">5</option>
+　<option value="june">6</option>
+　<option value="july">7</option>
+　<option value="august">8</option>
+　<option value="september">9</option>
+　<option value="october">10</option>
+　<option value="november">11</option>
+　<option value="december">12</option>
+　</select>月<select name="Day">
+  <option value="select">請選取</option>
+　<option value="1">1</option>
+　<option value="2">2</option>
+　<option value="3">3</option>
+　<option value="4">4</option>
+　<option value="5">5</option>
+　<option value="6">6</option>
+　<option value="7">7</option>
+　<option value="8">8</option>
+　<option value="9">9</option>
+　<option value="10">10</option>
+　<option value="11">11</option>
+　<option value="12">12</option>
+  <option value="13">13</option>
+　<option value="14">14</option>
+　<option value="15">15</option>
+　<option value="16">16</option>
+　<option value="17">17</option>
+　<option value="18">18</option>
+　<option value="19">19</option>
+　<option value="20">20</option>
+　<option value="21">21</option>
+　<option value="22">22</option>
+　<option value="23">23</option>
+　<option value="24">24</option>
+　<option value="25">25</option>
+  <option value="26">26</option>
+　<option value="27">27</option>
+　<option value="28">28</option>
+　<option value="29">29</option>
+　<option value="30">30</option>
+　<option value="31">31</option>
+　</select>日<br><br>
+   電話:<input type="text" id="Phone"placeholder="低於10位數字"><br><br>
+   性別(單選):<input type="radio" name="sex" value="male" checked>男       <input type="radio" name="sex" value="female" checked>女
+　   </fieldset>   
+　   <fieldset>	
+　   <legend>其他項目</legend>
+從哪裡得知有這家店(複選):	 <input type=checkbox value="對應值一" name="選項名稱一"> 路過<input type=checkbox value="對應值二" name="選項名稱二"> 朋友家人<input type=checkbox value="對應值三" name="選項名稱三">網路 <input type=checkbox value="對應值四" name="選項名稱四"> 報紙<input type=checkbox value="對應值五" name="選項名稱五"> 傳單<br><br>
+請選擇你喜歡哪項食品(多選):
+　   <select multiple="multiple" size="6">
+  <option value ="一">1.獅子頭</option>
+  <option value ="二">2.臘肉</option>
+  <option value="三">3.牛肉麵</option>
+  <option value="四">4.炒飯</option>
+  <option value="五">5.滷味</option>
+  <option value="六">6.陽春麵</option>
+</select><br><br>
+   
+意見回饋:
+   <textarea cols="120" rows="10" id="Remarks"placeholder="請書寫於此處"></textarea>
+　   </fieldset>
+　   <script type="text/javascript">
+    <!-- 此check()函式在最後的「傳送」案鈕會用到 -->
+    function check() {
+        <!-- 若<form>屬性name值為reg裡的文字方塊值為空字串，則顯示「未輸入姓名」 -->
+        if (reg.Name.value == "") {
+            alert("未輸入姓名");
+        }
+        if (reg.Year.value == "") {
+            alert("生日未輸入完全");
+        }
+         if (reg.Month.value == "") {
+            alert("生日未輸入完全");
+        }
+         if (reg.Day.value == "") {
+            alert("生日未輸入完全");
+        }
+         if (reg.Phone.value == "") {
+            alert("未輸入電話");
+        }
+         if (reg.sex.value == "") {
+            alert("未輸入性別");
+        }
+        
+        <!-- 表單資料皆有填寫的話，則將資料送出 -->
+        else reg.submit();
+    }
+</script>
+
+<input type="submit" onClick="check()"> <input type="reset">
+　   </form>
+　   
+　   
+
+</head>
+
+<body>
+ <div id="ButtonD">
+      <input type="button" value="回首頁" onclick="location.href='1.html'">
+    </div>
+</body>
+</html>
